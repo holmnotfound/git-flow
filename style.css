@@ -1,30 +1,47 @@
 /* BASE */
 :root {
-    --background-grey: #424242;
-    --background-grey-light: #C4C4C4;
-    --heading-grey: #535556;
-    --heading-green: #748687;
-    --active-grey: #444444;
-    --lighter-grey: #E1DFDF;
-    --darker-grey: #8E8E8E;
-    --text-dark: #575859;
-    --text-light: #ffffff;
-    --heading-yellow: #FED702;
+  --background-grey: #424242;
+  --background-grey-light: #c4c4c4;
+  --heading-grey: #535556;
+  --heading-green: #748687;
+  --active-grey: #444444;
+  --lighter-grey: #e1dfdf;
+  --darker-grey: #8e8e8e;
+  --text-dark: #575859;
+  --text-light: #ffffff;
+  --heading-yellow: #fed702;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-h1, h2, h3 {
-    text-transform: uppercase;
-    font-family: sans-serif;
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: sans-serif;
 }
 
 /* Utilities */
 .content-wrapper {
-    max-width: 95%;
-    margin: 0 auto;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* Page Header */
+.page-header {
+  width: 100%;
+  background-image: url("./resources/header-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header__title {
+  padding: 8rem 0;
+  font-size: 4rem;
+  color: var(--heading-yellow);
 }
