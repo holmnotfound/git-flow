@@ -148,3 +148,14 @@ h3 {
   background-color: var(--darker-grey);
   color: var(--text-light);
 }
+
+@media screen and (max-width: 800px) {
+  .main-section__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-section__box {
+    width: 90%;
+  }
+}
