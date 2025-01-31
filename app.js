@@ -2,6 +2,20 @@ import apiHandler from "./apiHandler.js";
 import pagination from "./pagination.js";
 import characters from "./characters.js";
 
+pageSetup();
+
+function pageSetup() {
+  fetchCharacters();
+  paginationSetup();
+
+  document
+    .querySelector("#searchInput")
+    .addEventListener("input", updateAutoCompleteList);
+}
+import apiHandler from "./apiHandler.js";
+import pagination from "./pagination.js";
+import characters from "./characters.js";
+
 async function fetchCharacters() {
   let nextUrl = "https://swapi.dev/api/people/";
 
@@ -17,15 +31,4 @@ async function fetchCharacters() {
 
   pagination.setNmbrOfPosts(characters.getCharacters().length);
   renderCharacters();
-}
-
-pageSetup();
-
-function pageSetup() {
-  fetchCharacters();
-  paginationSetup();
-
-  document
-    .querySelector("#searchInput")
-    .addEventListener("input", updateAutoCompleteList);
 }
