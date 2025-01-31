@@ -86,7 +86,25 @@ function renderCharacters() {
   pagination.updatePaginationDisplay();
 }
 
-async function renderPersonDetails(url) {}
+async function renderPersonDetails(url) {
+  const data = await apiHandler.fetchData(url);
+  const headRef = document.querySelector("#personName");
+  headRef.textContent = data.name;
+
+  const listRef = document.querySelector("#personInfoList");
+
+  const personListContent = `
+    <li class="person-info__list-item">Height: ${data.height} cm</li>
+    <li class="person-info__list-item">Mass: ${data.mass} kg</li>
+    <li class="person-info__list-item">Hair Color: ${data.hair_color}</li>
+    <li class="person-info__list-item">Skin Color: ${data.skin_color}</li>
+    <li class="person-info__list-item">Eye Color: ${data.eye_color}</li>
+    <li class="person-info__list-item">Birth Year: ${data.birth_year}</li>
+    <li class="person-info__list-item">Gender: ${data.gender}</li>
+`;
+
+  listRef.innerHTML = personListContent;
+}
 
 async function renderHomeworldDetails(url) {}
 
