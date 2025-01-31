@@ -177,6 +177,7 @@ h3 {
 
 .autocomplete-list li:hover {
   background-color: #f4f4f4;
+}
 
 /* Pagination Container */
 .pagination-container {
@@ -195,11 +196,9 @@ h3 {
 .pagination-btn {
   cursor: pointer;
   font-size: 1.5rem;
-
-
 }
-  
-  @media screen and (max-width: 800px) {
+
+@media screen and (max-width: 800px) {
   .main-section__wrapper {
     flex-direction: column;
     align-items: center;
@@ -208,3 +207,4 @@ h3 {
   .main-section__box {
     width: 90%;
   }
+}
