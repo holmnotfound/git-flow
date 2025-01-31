@@ -149,7 +149,6 @@ h3 {
   color: var(--text-light);
 }
 
-
 /* Search Section */
 .search-section {
   background-color: var(--background-grey-light);
@@ -197,4 +196,15 @@ h3 {
   cursor: pointer;
   font-size: 1.5rem;
 
+
 }
+  
+  @media screen and (max-width: 800px) {
+  .main-section__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-section__box {
+    width: 90%;
+  }
