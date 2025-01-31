@@ -126,4 +126,33 @@ async function renderHomeworldDetails(url) {
   listRef.innerHTML = homeListContent;
 }
 
-function updateAutoCompleteList(event) {}
+function updateAutoCompleteList(event) {
+  console.log(event.target.value);
+
+  const autoCompleteList = document.querySelector("#autocompleteList");
+  const userInput = event.target.value.toLowerCase();
+
+  const matchedCharacters = characters
+    .getCharacters()
+    .filter((character) => character.name.toLowerCase().includes(userInput));
+  console.log(matchedCharacters.length);
+
+  autoCompleteList.innerHTML = "";
+
+  let maxCounter = 10;
+  if (matchedCharacters.length < 10) {
+    maxCounter = matchedCharacters.length;
+  }
+
+  for (let i = 0; i < maxCounter; i++) {
+    const listItemRef = document.createElement("li");
+    listItemRef.textContent = matchedCharacters[i].name;
+    autoCompleteList.appendChild(listItemRef);
+
+    listItemRef.addEventListener("click", () => {
+      renderPersonDetails(matchedCharacters[i].url);
+      renderHomeworldDetails(matchedCharacters[i].homeworld);
+      autoCompleteList.innerHTML = "";
+    });
+  }
+}
