@@ -85,3 +85,9 @@ function renderCharacters() {
   }
   pagination.updatePaginationDisplay();
 }
+
+async function renderPersonDetails(url) {}
+
+async function renderHomeworldDetails(url) {}
+
+function updateAutoCompleteList(event) {}
