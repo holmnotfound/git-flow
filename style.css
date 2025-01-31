@@ -149,6 +149,7 @@ h3 {
   color: var(--text-light);
 }
 
+
 /* Search Section */
 .search-section {
   background-color: var(--background-grey-light);
@@ -177,4 +178,23 @@ h3 {
 
 .autocomplete-list li:hover {
   background-color: #f4f4f4;
+
+/* Pagination Container */
+.pagination-container {
+  margin: auto;
+  display: flex;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-indicator {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.pagination-btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+
 }
