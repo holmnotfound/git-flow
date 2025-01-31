@@ -18,3 +18,14 @@ async function fetchCharacters() {
   pagination.setNmbrOfPosts(characters.getCharacters().length);
   renderCharacters();
 }
+
+pageSetup();
+
+function pageSetup() {
+  fetchCharacters();
+  paginationSetup();
+
+  document
+    .querySelector("#searchInput")
+    .addEventListener("input", updateAutoCompleteList);
+}
