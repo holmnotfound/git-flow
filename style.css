@@ -1,0 +1,30 @@
+/* BASE */
+:root {
+    --background-grey: #424242;
+    --background-grey-light: #C4C4C4;
+    --heading-grey: #535556;
+    --heading-green: #748687;
+    --active-grey: #444444;
+    --lighter-grey: #E1DFDF;
+    --darker-grey: #8E8E8E;
+    --text-dark: #575859;
+    --text-light: #ffffff;
+    --heading-yellow: #FED702;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+/* Utilities */
+.content-wrapper {
+    max-width: 95%;
+    margin: 0 auto;
+}
