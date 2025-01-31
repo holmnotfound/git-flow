@@ -106,6 +106,24 @@ async function renderPersonDetails(url) {
   listRef.innerHTML = personListContent;
 }
 
-async function renderHomeworldDetails(url) {}
+async function renderHomeworldDetails(url) {
+  const data = await apiHandler.fetchData(url);
+  console.log(data);
+
+  const headingRef = document.querySelector("#homeName");
+  headingRef.textContent = data.name;
+  const listRef = document.querySelector("#homeInfoList");
+
+  const homeListContent = `
+    <li class="home-info__list-item">Rotation Period: ${data.rotation_period}h</li>
+    <li class="home-info__list-item">Orbital Period: ${data.orbital_period} days</li>
+    <li class="home-info__list-item">Diameter: ${data.diameter} km</li>
+    <li class="home-info__list-item">Climate: ${data.climate}</li>
+    <li class="home-info__list-item">Gravity: ${data.gravity}</li>
+    <li class="home-info__list-item">Terrain: ${data.terrain}</li>
+`;
+
+  listRef.innerHTML = homeListContent;
+}
 
 function updateAutoCompleteList(event) {}
